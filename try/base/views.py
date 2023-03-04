@@ -28,7 +28,7 @@ def donorsList(request):
 
 def patientsList(request):
     patients = Patient.objects.all()
-    context = {'patient': patient}
+    context = {'patients': patients}
     return render(request, 'base/patients_list.html',context)
 
 
