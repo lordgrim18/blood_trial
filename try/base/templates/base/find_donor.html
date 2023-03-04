@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+
+    <form method="GET">
+        {{myFilter.form}}
+
+        <input type="submit" value="search">
+    </form>
+    
+</div>
+<hr>
+
+<div>
+    <h3>{{donors_count}} number of donors </h3>
+</div>
+{% for donor in donors %}
+<div>
+    <h5>{{donor.name}}</h5>
+</div>
+
+{% endfor %}
+
+{% endblock %}

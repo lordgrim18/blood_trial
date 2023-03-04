@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+ 
+<div>  
+    <h3>{{donors_count}} donors available</h3>
+    <h4>{{patients_count}} patients present</h4>
+    {% if user.is_authenticated %}
+    <a href="{% url 'donors-list' %}">donors</a>
+    <a href="{% url 'patients-list' %}">patients</a>
+    {% else %}
+    <p>login/sign up  to see donors list and patients list</p>
+    {% endif %}
+    
+
+<div/>
+
+{% endblock %}

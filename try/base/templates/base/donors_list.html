@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h2>blood donations</h2>
+    {% for donor in donors %}
+    <div>
+        {% if request.user == donor.donor_register %}
+        <a href="{% url 'update-donate' donor.id %}">update donate</a>
+        <a href="{% url 'delete-donate' donor.id %}">delete donate</a>
+        {% endif %}
+
+        <h5>{{donor.id}} -- <a href="{% url 'view-donate' donor.id %}">{{donor.name}}</a></h5>
+
+    </div>
+    <hr>
+    {% endfor %}
+
+{% endblock %}

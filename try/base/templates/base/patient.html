@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}  <!-- set it up so tht status of the message can be seen and new donors  can be selected??? -->
+
+<div class="patient-container">
+    <div>
+        
+        <li>{{patient.patient_name}}</li>
+        <li>{{patient.bystander_name}}</li>
+        <li>{{patient.blood_group}}</li>
+        <li>{{patient.required_date}}</li>
+        <li>{{patient.bystander_no}}</li>
+        <li>{{patient.admitted_hospital}}</li>
+        <li>{{patient.district}}</li>
+        <li>{{patient.place}}</li>
+        <li>{{patient.units}}</li>
+        
+        
+    </div>
+  
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+<h3>navbar</h3>
+<a href="/">
+    <h1>Logo</h1>
+</a>
+
+{% if request.user.is_authenticated %}
+<p>Hello <a href="{% url 'profile' user.id %}">{{request.user}}</a></p>
+<a href="{% url 'logout' %}">Logout</a>
+{% endif %}
+
+
+<hr>

@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="donor-container">
+    <div>
+        
+        <li>{{donor.name}}</li>
+        <li>{{donor.blood_group}}</li>
+        <li>{{donor.DOB}}</li>
+        <li>{{donor.mobile_no}}</li>
+        <li>{{donor.state}}</li>
+        <li>{{donor.district}}</li>
+        <li>{{donor.city}}</li>
+        <li>{{donor.email_id}}</li>
+        {% if donor.availability %}
+        <li>available</li>
+        {% else %}
+        <li>not available</li>
+        {% endif %}
+        
+    </div>
+  
+</div>
+
+{% endblock %}

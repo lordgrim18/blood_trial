@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h2>Patients</h2>
+    {% for patient in patients %}
+    <div>
+        {% if request.user == patient.patient_register %}
+        <a href="{% url 'update-patient' patient.id %}">update patient</a>
+        <a href="{% url 'delete-patient' patient.id %}">delete patient</a>
+        {% endif %}
+        <h5>{{patient.id}}-- <a href="{% url 'view-patient' patient.id %}">{{patient.patient_name}}</a></h5>
+    </div>
+    <hr>
+    {% endfor %}
+
+{% endblock %}

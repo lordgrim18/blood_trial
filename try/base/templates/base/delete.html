@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{%  block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {% if donor %}              <!-- edit code to remove redundancy -->
+    <p>are you sure you want to delete donor "{{donor}}" ??</p>
+    {% elif patient %}
+    <p>are you sure you want to delete patient "{{patient.patient_name}}" ??</p>
+    {% endif %}
+    <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+    <input type="submit" value="confirm" />
+</form>
+
+{% endblock %}
