@@ -43,4 +43,4 @@ class Patient(models.Model):
         ordering = ['-updated','-created']
 
     def __str__(self):
-        return self.name
+        return self.patient_name
